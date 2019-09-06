@@ -1,9 +1,9 @@
 {
-    "name": "catlane/laravel-admin-grid-exporter",
+    "name": "catlane/laravel-admin-exporter",
     "description": "laravel-admin grid-exporter",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "grid-exporter"],
-    "homepage": "https://github.com/catlane/laravel-admin-grid-exporter",
+    "homepage": "https://github.com/catlane/laravel-admin-exporter",
     "license": "MIT",
     "authors": [
         {

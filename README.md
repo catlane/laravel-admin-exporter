@@ -10,7 +10,7 @@
 
 ### 安装使用
 
-> composer require catlane/laravel-admin-grid-exporter
+> composer require catlane/laravel-admin-exporter
 
 ### 配置
 
