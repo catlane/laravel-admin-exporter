@@ -1,0 +1,33 @@
+{
+    "name": "catlane/laravel-admin-grid-exporter",
+    "description": "laravel-admin grid-exporter",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension", "grid-exporter"],
+    "homepage": "https://github.com/catlane/laravel-admin-grid-exporter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "catlane",
+            "email": "catlane1996@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Catlane\\GridExporter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Catlane\\GridExporter\\GridExporterServiceProvider"
+            ]
+        }
+    }
+}
