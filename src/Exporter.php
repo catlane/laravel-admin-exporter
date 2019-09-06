@@ -2,10 +2,11 @@
 /**
  * GridExporterDisplayer
  *
- * @author catlane <catlane@gmail.com>
+ * @author Catlane <Catlane@gmail.com>
  */
 
 namespace Catlane\GridExporter;
+
 
 use Encore\Admin\Grid;
 use Encore\Admin\Grid\Column;
@@ -62,6 +63,7 @@ class Exporter extends AbstractExporter implements FromCollection, WithHeadings
 	public function collection()
 	{
 		$lists = [];
+
 		$this->grid->build();
 		/**
 		 * @var Row $row
@@ -72,8 +74,9 @@ class Exporter extends AbstractExporter implements FromCollection, WithHeadings
 			foreach($this->columns as $key => $column)
 			{
 				$data[$column] = trim(strip_tags(preg_replace(/** @lang text */ '/<script(.*)>(.*)<\/script>/iUs', '', $row->column($key))));
-				$data[$column] = preg_replace("/(\s|\&nbsp\;|　|\xc2\xa0)/", " ", strip_tags($data[$column]));
-			}
+                $data[$column] = preg_replace("/(\s|\&nbsp\;|　|\xc2\xa0)/", " ", strip_tags($data[$column]));
+
+            }
 			$lists[] = $data;
 		}
 		
@@ -147,7 +150,7 @@ class Exporter extends AbstractExporter implements FromCollection, WithHeadings
 	{
 		return (function()
 		{
-			return $this->exporter instanceof Exporter ? $this->exporter : NULL;
+			return (new Exporter()) instanceof Exporter ? $this->exporter : NULL;
 		})->call($grid);
 	}
 }
